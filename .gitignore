@@ -1,0 +1,16 @@
+.DS_STORE
+
+# Virtualenv related
+env
+
+# python related
+__pycache__/
+
+
+# VSCode related
+__pycache__/
+
+# exclusion files
+pass_tw.py
+*.json
+
