@@ -13,8 +13,8 @@ import pass_tw
 def inicializa_cliente_twitter():
 
     ## Cria DF vazio
-    columns = ["id_tweet", "created_at", "text", "user_name" "in_reply_to_id", "retweeted_tweet_d"]
-    df = pd.DataFrame(columns=columns)
+    #columns = ["id_tweet", "created_at", "text", "user_name" "in_reply_to_id", "retweeted_tweet_d"]
+    #df = pd.DataFrame(columns=columns)
 
     client = StreamClient(pass_tw.CONSUMER_KEY,
                         pass_tw.CONSUMER_SECRET,
