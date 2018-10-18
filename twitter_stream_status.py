@@ -7,6 +7,7 @@
 from birdy.twitter import StreamClient
 import atexit
 import json
+import io
 import pandas as pd
 import pass_tw ## twitter credentials
 
@@ -20,9 +21,10 @@ df = pd.DataFrame(columns=columns)
 
 def exit_handler():
     print('Salvando Tweets')
-    with open('/home/rodrigo/Projects/twitter_test_birdy_lib/twitter_ss2.json', 'a') as my_file:
+    with io.open('/home/rodrigo/Projects/twitter_test_birdy_lib/twitter_ss2.json', 'w', encoding='utf8' ) as my_file:
         my_file.write(df.to_json(orient='records', lines=True))
     print('Fim')
+
 
 atexit.register(exit_handler)
 
