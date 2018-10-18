@@ -68,16 +68,16 @@ class Hashtag(db.Entity):
 
 class Url(db.Entity):
     id = PrimaryKey(int, auto=True)
-    expanded_url = Required(unicode)
-    url = Required(unicode)
-    display = Required(unicode)
-    tweet = Required(Tweet)
+    expanded_url = Optional(LongUnicode)
+    url = Optional(LongUnicode)
+    display = Optional(LongUnicode)
+    tweet = Optional(Tweet)
 
 class UserMention(db.Entity):
     _table_ = "user_mention"
     id = PrimaryKey(int, auto=True)
     tweet = Required(Tweet)
-    id_user = Required(int, size=64)
+    id_user = Optional(int, size=64)
     name = Optional(unicode)
     screen_name = Optional(unicode)
 
