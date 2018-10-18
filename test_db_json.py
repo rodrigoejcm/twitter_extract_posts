@@ -16,17 +16,19 @@ def save_data(json_data):
     
     if not db_init.User.exists(id=id_user):
         description = json_data['user']['description'] if 'description' in json_data['user'] else None 
-        if description : description = str(description.encode('unicode-escape')) 
+        #if description : description = str(description.encode('unicode-escape')) 
         followers_count = json_data['user']['followers_count'] if 'followers_count' in json_data['user'] else None
         friends_count = json_data['user']['friends_count'] if 'friends_count' in json_data['user'] else None
         id_str_user = json_data['user']['id_str'] if 'id_str' in json_data['user'] else None 
         screen_name = json_data['user']['screen_name'] if 'screen_name' in json_data['user'] else None  
         created_at = parser.parse(json_data['user']['created_at']) if 'created_at' in json_data['user'] else None 
         is_translator = json_data['user']['is_translator'] if 'is_translator' in json_data['user'] else False 
-        name = str(json_data['user']['name'].encode('unicode-escape')) if 'name' in json_data['user'] else None
+        name = json_data['user']['name'] if 'name' in json_data['user'] else None
+        #name = str(json_data['user']['name'].encode('unicode-escape')) if 'name' in json_data['user'] else None
         statuses_count = json_data['user']['statuses_count'] if 'statuses_count' in json_data['user'] else None
         verified = json_data['user']['verified'] if 'verified' in json_data['user'] else False
-        location = str(json_data['user']['location'].encode('unicode-escape')) if json_data['user']['location'] else None
+        #location = str(json_data['user']['location'].encode('unicode-escape')) if json_data['user']['location'] else None
+        location = json_data['user']['location'] if json_data['user']['location'] else None
         geo_enabled = json_data['user']['geo_enabled'] if 'geo_enabled' in json_data['user'] else False
         protected = json_data['user']['protected'] if 'protected' in json_data['user'] else False
         lang = json_data['user']['lang'] if 'lang' in json_data['user'] else None
@@ -72,7 +74,12 @@ def save_data(json_data):
         truncated = json_data['truncated']
         #text_full = 
         #text_full = Optional(str, nullable=True)
-        text = str(json_data['text'].encode('unicode-escape'))
+        #text = str(json_data['text'].encode('unicode-escape'))
+        text = json_data['text']
+        if truncated : 
+            text_full =  json_data['extended_entities']['full_text'] 
+        else:
+            text_full =  None
         contributors = json_data['contributors'] if 'contributors' in json_data else None 
         retweet_count = json_data['retweet_count'] if 'retweet_count' in json_data else None 
         in_reply_to_status_id = json_data['in_reply_to_status_id'] if 'in_reply_to_status_id' in json_data else None 
@@ -97,6 +104,7 @@ def save_data(json_data):
             favourite_count = favourite_count,
             truncated = truncated,
             text = text,
+            text_full = text_full,
             contributors = contributors, 
             retweet_count = retweet_count,
             in_reply_to_status_id = in_reply_to_status_id,
