@@ -92,7 +92,7 @@ def save_data(json_data):
             in_reply_to_status_id = json_data['in_reply_to_status_id'] if 'in_reply_to_status_id' in json_data else None 
             filter_level = json_data['filter_level'] if 'filter_level' in json_data else None 
             quote_count = json_data['quote_count'] if 'quote_count' in json_data else None 
-            geo = json_data['geo'] if 'geo' in json_data else None 
+            #geo = json_data['geo'] if 'geo' in json_data else None 
             source = json_data['source'] if 'source' in json_data else None 
             possibly_sensitive = json_data['possibly_sensitive'] if 'possibly_sensitive' in json_data else False 
             in_reply_to_screen_name = json_data['in_reply_to_screen_name'] if 'in_reply_to_screen_name' in json_data else None 
@@ -117,7 +117,7 @@ def save_data(json_data):
                 in_reply_to_status_id = in_reply_to_status_id,
                 filter_level = filter_level,
                 quote_count = quote_count,
-                geo = geo,
+                #geo = geo,
                 source = source,
                 possibly_sensitive = possibly_sensitive,
                 in_reply_to_screen_name = in_reply_to_screen_name,

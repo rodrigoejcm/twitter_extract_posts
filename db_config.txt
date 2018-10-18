@@ -3,3 +3,14 @@ create user twitter_user@localhost;
 SET PASSWORD FOR twitter_user@localhost = password('twitter_pass');
 GRANT ALL PRIVILEGES ON twitter.* to twitter_user@localhost IDENTIFIED BY "twitter_pass";
 FLUSH PRIVILEGES;
+
+
+
+#delete from usermention; delete from hashtag; delete from url; delete from tweet; delete from user;
+#drop table place; drop table user_mention; drop table  hashtag; drop table  url; drop table  tweet; drop table  user;
+
+#22:17
+#Sys Info:
+#Total Space: 10.340831232 GB
+#Used Space: 1.987866624 GB
+#Free Space: 8.336187392 GB

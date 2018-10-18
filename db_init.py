@@ -9,8 +9,6 @@ from pony.orm.core import *
 
 db = Database()
 
-#delete from usermention; delete from hashtag; delete from url; delete from tweet; delete from user;
-#drop table usermention; drop table  hashtag; drop table  url; drop table  tweet; drop table  user;
 
 class User(db.Entity):
     id = PrimaryKey(int, size=64)
@@ -44,7 +42,7 @@ class Tweet(db.Entity):
     in_reply_to_status_id = Optional(int, size=64)
     filter_level = Optional(str, nullable=True)
     quote_count = Optional(int)
-    geo = Optional(str, nullable=True)
+    #geo = Optional(str, nullable=True)
     source = Optional(str, nullable=True)
     #place = Optional(str, nullable=True)
     possibly_sensitive = Optional(bool)
