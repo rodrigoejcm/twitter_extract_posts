@@ -48,7 +48,7 @@ class Tweet(db.Entity):
     possibly_sensitive = Optional(bool)
     in_reply_to_screen_name = Optional(str, nullable=True)
     is_quoted_status = Optional(bool)
-    #coordinates = Optional(str, nullable=True)
+    coordinates = Optional(str, nullable=True)
     reply_count = Optional(int)
     lang = Optional(str, nullable=True)
     user = Required(User)

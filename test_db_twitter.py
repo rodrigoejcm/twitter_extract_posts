@@ -97,7 +97,7 @@ def save_data(json_data):
             possibly_sensitive = json_data['possibly_sensitive'] if 'possibly_sensitive' in json_data else False 
             in_reply_to_screen_name = json_data['in_reply_to_screen_name'] if 'in_reply_to_screen_name' in json_data else None 
             is_quoted_status = json_data['is_quoted_status'] if 'is_quoted_status' in json_data else False 
-            coordinates = json_data['coordinates'] if 'coordinates' in json_data else None 
+            #coordinates = json_data['coordinates'] if 'coordinates' in json_data else None 
             reply_count = json_data['reply_count'] if 'reply_count' in json_data else None 
             lang =  json_data['lang'] if 'lang' in json_data else None 
             retweet_from_tweet_id = json_data['retweeted_status']['id'] if 'retweeted_status' in json_data else None 
@@ -122,7 +122,7 @@ def save_data(json_data):
                 possibly_sensitive = possibly_sensitive,
                 in_reply_to_screen_name = in_reply_to_screen_name,
                 is_quoted_status = is_quoted_status,
-                coordinates = coordinates,
+                #coordinates = coordinates,
                 reply_count = reply_count,
                 lang =  lang,
                 retweet_from_tweet_id = retweet_from_tweet_id
