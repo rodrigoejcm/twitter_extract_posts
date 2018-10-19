@@ -14,9 +14,12 @@ def index():
     total_space, used_space, free_space = shutil.disk_usage(__file__)
     total_tweets = count_tweets()
     last_five_tweets = find_last_tweets()
-    print(last_five_tweets)
+    retweet_tweets = find_most_retweet_tweets()
+    reply_tweets = find_most_reply_tweets()
     return render_template('index.html',
-        last_tweets=last_five_tweets, 
+        last_tweets=last_five_tweets,
+        reply_tweets=reply_tweets, 
+        retweet_tweets=retweet_tweets,
         total=total_tweets, 
         space = total_space/10 **9,
         used = used_space/10**9,
@@ -25,6 +28,12 @@ def index():
 
 def find_last_tweets():
     return db_init.Tweet.select().order_by(desc(db_init.Tweet.created_at))[:5]
+
+def find_most_reply_tweets():
+    return db_init.Tweet.select().order_by((db_init.Tweet.reply_count))[:5]
+    
+def find_most_retweet_tweets():
+    return db_init.Tweet.select().order_by(desc(db_init.Tweet.retweet_count))[:5]
 
 
 
@@ -35,3 +44,4 @@ def count_tweets():
 
 if __name__ == '__main__':
     app.run(port=443, host='0.0.0.0')
+    #app.run()
