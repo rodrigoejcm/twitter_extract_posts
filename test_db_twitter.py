@@ -23,7 +23,16 @@ client = StreamClient(pass_tw.CONSUMER_KEY,
                     pass_tw.ACCESS_TOKEN_SECRET)
 
 
-resource = client.stream.statuses.filter.post(follow=['8802752','9317502','14594813'])
+follow = ['8802752','9317502','14594813','790680', '2174537102', '54341363', '65473559', '17715048', '14594698' ] 
+#resource = client.stream.statuses.filter.post(follow=['8802752','9317502','14594813'])
+resource = client.stream.statuses.filter.post(follow=follow)
+
+
+
+
+
+
+
 
 
 @db_session
