@@ -53,12 +53,15 @@ def get_total_tweets_hour():
                 x.append(p[0])
                 y.append(p[1])
         img = io.BytesIO()
+
+        plt.rcParams.update({'font.size': 8})
+        plt.figure(figsize=(11,6))
+
         plt.plot(x, y)
-        plt.xticks(rotation=45)
-        plt.margins(0.2)
+        plt.xticks(rotation=90)
         plt.subplots_adjust(bottom=0.25)
-        for a,b in zip(x, y): 
-                plt.text(a, b, str(b))
+        #for a,b in zip(x, y): 
+        #        plt.text(a, b, str(b))
         plt.savefig(img, format='png')
         img.seek(0)
         graph_url = base64.b64encode(img.getvalue()).decode()
@@ -68,7 +71,7 @@ def get_total_tweets_hour():
 
 if __name__ == '__main__':
     app.run(port=443, host='0.0.0.0')
-   # app.run()
+    #app.run()
 
 
 
