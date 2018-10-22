@@ -89,7 +89,7 @@ class Place(db.Entity):
     country_code = Optional(unicode)
     
 
-#sql_debug(True)  # Output all SQL queries to stdout
+sql_debug(True)  # Output all SQL queries to stdout
 
 
 
