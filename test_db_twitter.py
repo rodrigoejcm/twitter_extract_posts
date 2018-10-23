@@ -10,11 +10,6 @@ import pass_tw ## twitter credentials
 import unicodedata
 from unidecode import unidecode
 
-#import urllib.request
-#import urlparse, os
-
-
-
 
 
 client = StreamClient(pass_tw.CONSUMER_KEY,
@@ -23,7 +18,7 @@ client = StreamClient(pass_tw.CONSUMER_KEY,
                     pass_tw.ACCESS_TOKEN_SECRET)
 
 
-follow = ['8802752','9317502','14594813','790680', '2174537102', '54341363', '65473559', '17715048', '14594698' ] 
+follow = ['8802752','9317502','14594813','790680', '2174537102', '54341363', '65473559', '17715048', '14594698', '16632084' ] 
 #resource = client.stream.statuses.filter.post(follow=['8802752','9317502','14594813'])
 resource = client.stream.statuses.filter.post(follow=follow)
 
@@ -188,17 +183,7 @@ def save_data(json_data):
 
 
 
-    #urllib.request.urlretrieve(
-    #    "http://www.digimouth.com/news/media/2011/09/google-logo.jpg", 
-    #    "local-filename.jpg")
-
-    #url = 'http://www.plssomeotherurl.com/station.pls?id=111'
-    #path = urlparse.urlparse(url).path
-    #ext = os.path.splitext(path)[1] ## EXENSION
-    
-
-
-    
+ 
 
 
 for data in resource.stream():
