@@ -14,3 +14,6 @@ __pycache__/
 pass_tw.py
 *.json
 
+
+# OLD
+old/

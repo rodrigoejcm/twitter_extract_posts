@@ -16,7 +16,7 @@ client = UserClient(pass_tw.CONSUMER_KEY,
 #response = client.api.users.show.get(screen_name='g1')
 response = client.api.statuses.user_timeline.get(screen_name='g1',exclude_replies=False)
 
-with open('/home/rodrigo/Projects/twitter_test_birdy_lib/twitter_ust.json', 'a') as my_file:
+with open('/home/rodrigo/Projects/twitter_test_birdy_lib/old/twitter_ust.json', 'a') as my_file:
     json.dump(response.data, my_file)
 
 ## PRIMEIRO NIVEL

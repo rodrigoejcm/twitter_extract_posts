@@ -18,7 +18,7 @@ client = StreamClient(pass_tw.CONSUMER_KEY,
                     pass_tw.ACCESS_TOKEN_SECRET)
 
 
-follow = ['8802752','9317502','14594813','790680', '2174537102', '54341363', '65473559', '17715048', '14594698', '16632084' ] 
+follow = ['8802752','9317502','14594813','790680', '2174537102', '54341363', '65473559', '17715048', '14594698', '16632084', '128372940', '354095556', '39522911', '1011297899463041028', '29913589'] 
 #resource = client.stream.statuses.filter.post(follow=['8802752','9317502','14594813'])
 resource = client.stream.statuses.filter.post(follow=follow)
 
