@@ -82,6 +82,7 @@ class UserMention(db.Entity):
 class Place(db.Entity):
     id = PrimaryKey(int, auto=True)
     tweet = Required(Tweet)
+    #tweet = Optional(Tweet)
     full_name = Optional(unicode)
     name = Optional(unicode)
     place_type = Optional(unicode)

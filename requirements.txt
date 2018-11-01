@@ -1,5 +1,6 @@
 asn1crypto==0.24.0
 astroid==2.0.4
+beautifulsoup4==4.6.3
 birdy==0.3.2
 certifi==2018.8.24
 cffi==1.11.5
@@ -35,6 +36,7 @@ python-socketio==2.0.0
 pytz==2018.5
 requests==2.19.1
 requests-oauthlib==1.0.0
+selenium==3.14.1
 six==1.11.0
 typed-ast==1.1.0
 Unidecode==1.0.22
