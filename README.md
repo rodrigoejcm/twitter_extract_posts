@@ -62,7 +62,6 @@ python stream_db_twitter.py
 
 ```
 
-
 ## Monitor the catured tweets  
 Start the flask app and ckeck http://localhost:8080
 
@@ -70,4 +69,3 @@ Start the flask app and ckeck http://localhost:8080
 python app.py
 
 ```
-
