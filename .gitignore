@@ -16,8 +16,8 @@ pass_tw_2.py
 *.json
 
 _notes.txt
-db_config.txt
-db_details.txt
+_db_config.txt
+_db_details.txt
 
 
 # OLD
