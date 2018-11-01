@@ -15,10 +15,10 @@ pass_tw.py
 pass_tw_2.py
 *.json
 
-notes.txt
+_notes.txt
 db_config.txt
 db_details.txt
 
 
 # OLD
-old/
+_old/
